@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fall detection fo elderly</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container bg-white" >
+        <h1>กรอกข้อมูล</h1>
+        
+        <div class="form-section">
+            <h2>กรุณากรอกข้อมูลของผู้ดูแล</h2>
+            <form id="form">
+                <label for="caregiver-name">ชื่อผู้ดูแล</label>
+                <input type="text" id="caregiver-name" name="caregiver-name">
+                <label for="caregiver-phone">เบอร์โทรศัพท์</label>
+                <input type="tel" id="caregiver-phone" name="caregiver-phone">
+            </form>
+        </div>
+
+        <div class="form-section">
+            <h2>กรุณากรอกข้อมูลของผู้สูงอายุ</h2>
+            <form>
+                <label for="elderly-name">ชื่อผู้สูงอายุ</label>
+                <input type="text" id="elderly-name" name="elderly-name">
+                <label for="elderly-phone">เบอร์โทรศัพท์</label>
+                <input type="tel" id="elderly-phone" name="elderly-phone">
+                <label for="elderly-address">ที่อยู่</label>
+                <input type="text" id="elderly-address" name="elderly-address">
+            </form>
+        </div>
+
+        <div class="form-section">
+            <h2>กรุณากรอกข้อมูลของญาติผู้สูงอายุ</h2>
+            <form>
+                <label for="relative-name">ชื่อญาติผู้สูงอายุ</label>
+                <input type="text" id="relative-name" name="relative-name">
+                <label for="relative-phone">เบอร์โทรศัพท์</label>
+                <input type="tel" id="relative-phone" name="relative-phone">
+                <label for="relative-address">ที่อยู่</label>
+                <input type="text" id="relative-address" name="relative-address">
+            </form>
+        </div>
+
+        <button type="submit" id="submit-button">ยืนยัน</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
