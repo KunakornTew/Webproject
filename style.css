@@ -28,6 +28,11 @@ body {
     box-sizing: border-box;
 }
 
+.table-container {
+    overflow-x: auto;
+    color: black;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -37,7 +42,7 @@ table {
 th,
 td {
     padding: 15px;
-    border: 1px solid #fff;
+    border: 1px solid black;
 }
 
 th {
@@ -54,23 +59,40 @@ a {
     text-decoration: none;
 }
 
+.details {
+    text-align: left;
+}
+
 .details img {
     max-width: 100%;
     border-radius: 8px;
     margin-bottom: 20px;
 }
 
-.details .severity,
-.details .chart {
-    margin: 20px 0;
-}
-
-.info-section {
+.info-section,
+.severity,
+.chart {
     margin-bottom: 20px;
 }
 
-.info-section p {
-    margin: 5px 0;
+.chart .button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.chart .button-group button {
+    background-color: #1E292F;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.chart .button-group button:hover {
+    background-color: #3aa04b;
 }
 
 .camera-section {
@@ -150,17 +172,42 @@ button:hover {
     background-color: #3aa04b;
 }
 
+.save-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.save-button button {
+    background-color: #fff; 
+    color: #1E292F; 
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.save-button button:hover {
+    background-color: #3aa04b; 
+    color: #000; 
+}
+
 @media (max-width: 480px) {
     .container {
+        width: 100%;
         padding: 15px;
     }
 
-    .info-section,
-    .camera-section {
+    .info-section,.camera-section {
         padding: 10px;
     }
 
-    .camera-header{
+    .camera-header {
         line-height: 0.75;
     }
 
@@ -183,5 +230,9 @@ button:hover {
     th,
     td {
         padding: 10px;
+    }
+
+    .chart .button-group button {
+        padding: 8px 15px;
     }
 }

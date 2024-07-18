@@ -47,3 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+function saveAsPDF() {
+    html2canvas(document.body).then(function(canvas) {
+        var imgData = canvas.toDataURL('image/png');
+        var doc = new jsPDF('p', 'mm');
+        doc.addImage(imgData, 'PNG', 10, 10);
+        doc.save('fall-detail.pdf');
+    });
+}
